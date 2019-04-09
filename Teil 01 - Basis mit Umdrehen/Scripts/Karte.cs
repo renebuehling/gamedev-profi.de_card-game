@@ -24,15 +24,30 @@ public class Karte : MonoBehaviour
         
     }
 
+    private bool KarteSchonUmgedreht()
+    {
+        return GetComponent<Image>().sprite == kartenbild;
+    }
+
+    private bool UmdrehenGestartet()
+    {
+        return GetComponent<PlayableDirector>().state == PlayState.Playing;
+    }
+
     public void OnClick()
     {
-        Debug.Log("OnClick wurde aufgerufen.");
+        if (UmdrehenGestartet() || KarteSchonUmgedreht()) { return;  }
+
+        Debug.Log("OnClick wurde aufgerufen. ");
 
         GetComponent<PlayableDirector>().Play();        
     }
 
     public void TauscheKartenbild()
     {
+        if (!Application.isPlaying) { return; }
+
+        Debug.Log("Jetzt wird das Kartenbild getauscht.");
         GetComponent<Image>().sprite = kartenbild;
     }
 
