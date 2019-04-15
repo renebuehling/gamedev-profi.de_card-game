@@ -35,6 +35,7 @@ public class Kartenstapel : MonoBehaviour
         //kartendarstellung.gameObject.SetActive(true);
         GameObject karteInSzene = Instantiate(kartenPrefab,kartenContainer.transform);
         karteInSzene.GetComponent<Image>().sprite = gezogeneKarte.kartenbild;
+        karteInSzene.GetComponent<Button>().enabled = false;
 
         if (karten.Count == 0) gameObject.SetActive(false);
     }
