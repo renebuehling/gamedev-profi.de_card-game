@@ -26,7 +26,14 @@ public class SpielprinzipTarot : MonoBehaviour
         }
         else
         {
-            hilfetext.text = "Ziehe " + verbleibendeZuege + " Karten!";
+            if (verbleibendeZuege==1)
+            {
+                hilfetext.text = "Ziehe die letzte Karte!";
+            }
+            else
+            {
+                hilfetext.text = "Ziehe " + verbleibendeZuege + " Karten!";
+            }
         }
     }
 
