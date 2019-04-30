@@ -37,10 +37,15 @@ public class SpielprinzipTarot : MonoBehaviour
         }
     }
 
+    public bool automatischLegen = false;
 
     private void Start()
     {
         aktualisiereHilfetext();
+        if (automatischLegen)
+        {
+            while (verbleibendeZuege > 0) { KlickAufStapel(); }
+        }
     }
 
     public void KlickAufStapel()
