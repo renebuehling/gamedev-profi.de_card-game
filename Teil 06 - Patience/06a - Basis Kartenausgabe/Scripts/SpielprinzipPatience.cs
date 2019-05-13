@@ -18,6 +18,11 @@ public class SpielprinzipPatience : MonoBehaviour
 
     public void KlickAufStapel()
     {
+        if (vorschauKarte.aktuelleBeschreibung() == null) //keine Karte aufgedeckt oder übrig
+        {
+            return;
+        }
+
         Debug.Log("Klick auf Stapel");
         Kartenstapel stapel = GetComponent<Kartenstapel>(); //Verweis auf Kartenstapelscript
 
