@@ -17,7 +17,7 @@ public class Karte : MonoBehaviour
 
     /// <summary>
     /// Weist der Kartendarstellung einen neuen Kartenwert zu.
-    /// Die Karte ist sofort sichtbar, wenn kannAngeklicktWerden true ist.
+    /// Die Karte ist sofort sichtbar, wenn kannAngeklicktWerden false ist.
     /// </summary>
     /// <param name="neueBeschreibung">Neuer Wert der Karte.</param>
     /// <param name="kannAngeklicktWerden">Wenn true, spielt die Karte bei Klick die Umdrehanimation ab.</param>
